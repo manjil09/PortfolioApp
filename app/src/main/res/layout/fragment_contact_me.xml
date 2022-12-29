@@ -16,7 +16,7 @@
             android:layout_height="wrap_content"
             android:layout_gravity="center_horizontal"
             android:layout_marginTop="10dp"
-            android:text="CONTACT ME"
+            android:text="@string/contactTitle"
             android:textSize="30sp"
             android:textStyle="bold"
             />
@@ -26,9 +26,8 @@
             android:layout_gravity="center_horizontal"
             android:layout_marginBottom="10dp"
             android:textSize="12sp"
-            android:text="I'll be glad to answer your question!"
+            android:text="@string/contactSubTitle"
             />
-
         <EditText
             android:id="@+id/etName"
             android:layout_width="match_parent"
@@ -36,7 +35,7 @@
             android:layout_gravity="center_horizontal"
             android:layout_marginHorizontal="60dp"
             android:layout_marginVertical="5dp"
-            android:hint="Name"
+            android:hint="@string/hintName"
             android:inputType="textPersonName"
             android:minHeight="48dp"
             />
@@ -48,7 +47,7 @@
             android:layout_marginHorizontal="60dp"
             android:layout_marginVertical="5dp"
             android:ems="10"
-            android:hint="Email address"
+            android:hint="@string/hintEmail"
             android:inputType="textEmailAddress"
             android:minHeight="48dp"
             />
@@ -60,7 +59,7 @@
             android:layout_marginHorizontal="60dp"
             android:layout_marginVertical="5dp"
             android:ems="10"
-            android:hint="Phone number"
+            android:hint="@string/hintPhoneNumber"
             android:inputType="phone"
             android:minHeight="48dp"
             />
@@ -74,14 +73,22 @@
             android:ems="10"
             android:gravity="start|top"
             android:inputType="textMultiLine"
-            android:hint="Your message"
+            android:hint="@string/hintMessage"
             />
         <Button
             android:id="@+id/btSendMessage"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="60dp"
-            android:text="Send Message"
+            android:text="@string/btSendMessageLabel"
+            />
+        <Button
+            android:id="@+id/button"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/myNumber"
+            
+            style="@style/Widget.Material3.Button.TextButton"
             />
         <LinearLayout
             android:layout_width="match_parent"
@@ -98,7 +105,7 @@
                 android:layout_height="wrap_content"
                 android:gravity="center_vertical"
                 android:layout_marginHorizontal="10dp"
-                android:text="+977 9845124521"
+                android:text="@string/myNumber"
                 app:drawableStartCompat="@drawable/ic_call"
                 />
             <TextView
@@ -107,10 +114,9 @@
                 android:layout_height="wrap_content"
                 android:gravity="center_vertical"
                 android:layout_marginHorizontal="10dp"
-                android:text="mymail@gmail.com"
+                android:text="@string/myEmail"
                 app:drawableStartCompat="@drawable/ic_email"
                 />
         </LinearLayout>
-
     </LinearLayout>
 </FrameLayout>

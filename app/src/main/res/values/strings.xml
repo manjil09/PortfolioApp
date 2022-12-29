@@ -1,5 +1,17 @@
 <resources>
     <string name="app_name">ManjilKoju</string>
+    <string name="contactSubTitle">I\'ll be glad to answer your question!</string>
+    <string name="contactTitle">CONTACT ME</string>
+    <string name="hintName">Name</string>
+    <string name="hintEmail">Email address</string>
+    <string name="hintPhoneNumber">Phone number</string>
+    <string name="hintMessage">Your message</string>
+    <string name="btSendMessageLabel">Send Message</string>
+    <string name="myNumber">+977 9845124521</string>
+    <string name="myEmail">mymail@gmail.com</string>
+    <string name="myJavaSkills">The description of skill\n will be here.</string>
+    <string name="java">Java</string>
     <!-- TODO: Remove or change this placeholder text -->
-    <string name="hello_blank_fragment">Hello contact fragment</string>
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="myName">Manjil Koju</string>
 </resources>
