@@ -1,5 +1,7 @@
 package com.profile.manjilkoju;
 
+import android.content.Intent;
+import android.net.Uri;
 import android.os.Bundle;
 
 import androidx.annotation.NonNull;
@@ -9,13 +11,14 @@ import androidx.fragment.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.TextView;
 
 public class ContactMeFragment extends Fragment {
+    TextView tvCall,tvEmail;
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-
     }
 
     @Override
@@ -28,5 +31,36 @@ public class ContactMeFragment extends Fragment {
     @Override
     public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
+
+        tvCall = view.findViewById(R.id.tvCall);
+        tvEmail = view.findViewById(R.id.tvEmail);
+
+        tvCall.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                openDialer();
+            }
+        });
+
+        tvEmail.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                openEmail();
+            }
+        });
+    }
+
+    public void openDialer(){
+        Intent dialerIntent = new Intent(Intent.ACTION_DIAL);
+        dialerIntent.setData(Uri.parse("tel:9845124521"));
+        startActivity(dialerIntent);
+    }
+
+    public void openEmail(){
+        Intent emailIntent = new Intent(Intent.ACTION_SENDTO);
+        emailIntent.setData(Uri.parse("mailto:"));
+        emailIntent.putExtra(Intent.EXTRA_EMAIL,new String[]{"mymail@gmail.com"});
+        emailIntent.putExtra(Intent.EXTRA_SUBJECT, "App Review");
+        startActivity(emailIntent);
     }
 }
