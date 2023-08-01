@@ -35,6 +35,7 @@ public class ContactMeFragment extends Fragment {
         tvCall = view.findViewById(R.id.tvCall);
         tvEmail = view.findViewById(R.id.tvEmail);
 
+        //setting onClickListener to open the dialer
         tvCall.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -42,6 +43,7 @@ public class ContactMeFragment extends Fragment {
             }
         });
 
+        //setting onClickListener to open the email app
         tvEmail.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -50,12 +52,14 @@ public class ContactMeFragment extends Fragment {
         });
     }
 
+    // to open dialer app and call the given number
     public void openDialer(){
         Intent dialerIntent = new Intent(Intent.ACTION_DIAL);
         dialerIntent.setData(Uri.parse("tel:9845124521"));
         startActivity(dialerIntent);
     }
 
+    // to open email app and draft an email to the given emailAddress
     public void openEmail(){
         Intent emailIntent = new Intent(Intent.ACTION_SENDTO);
         emailIntent.setData(Uri.parse("mailto:"));

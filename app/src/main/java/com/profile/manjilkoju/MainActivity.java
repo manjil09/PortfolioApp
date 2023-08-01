@@ -29,6 +29,7 @@ public class MainActivity extends AppCompatActivity implements NavigationBarView
 
     @Override
     public boolean onNavigationItemSelected(@NonNull MenuItem item) {
+        //navigates through the respective fragment when bottom navigation bar is used
         if (item.getItemId() == R.id.home){
             getSupportFragmentManager().beginTransaction().replace(R.id.flContainer, homeFragment).commit();
             return true;

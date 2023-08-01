@@ -17,11 +17,13 @@ public class IntroSliderPref {
         editor = sharedPreferences.edit();
     }
 
+    //sets the boolean value for the sharedPreferences as input from the parameter
     public void setIsFirstTime(boolean firstTime){
         editor.putBoolean(IS_FIRST_TIME, firstTime);
         editor.commit();
     }
 
+    //returns the the boolean value that has been stored in sharedPreferences
     public boolean isFirstTime(){
         return sharedPreferences.getBoolean(IS_FIRST_TIME, true);
     }
